@@ -1,6 +1,6 @@
 
 /*
- * *** PLACE YOUR NAME / SECTION  HERE ***
+ * *** Alena Eshaya / SECTION 002 ***
  *
  * Homework # 1 (Programming Assignment). This Java class defines some basic
  * manipulation operations on Linked-Lists and Stacks.
@@ -87,10 +87,22 @@ public class HW1 {
          */
         public void removeElementsLT ( int ltValue ) {
 
-            // YOUR CODE GOES HERE
+            // This method removes nodes from the head while the head is less than ItValue
+            while(head != null && head.data <ItValue) {
+                head = head.next;
+            }
+
+            Node current = head;
+            while (current != null && current.next != null){
+                if (current.next.data < ItValue) {
+                    current.next = current.next.next;
+                } else {
+                    current = current.next;
+                }
+            }
+        }
 
             return;
-        }
 
 
         /*
@@ -99,11 +111,23 @@ public class HW1 {
          */
 
         public void removeElement ( int value ) {
-
-            // YOUR CODE GOES HERE
-
-            return;
+        // Remove nodes from the head WHILE head matches
+        while(head != null && head.daa == value){
+            head = head.next;
         }
+
+            Node current = head;
+            while(current != null && current.next != null){
+                if (current.next.data == value){
+                    current.next = current.next.next;
+                } else {
+                    current = current.next;
+                }
+
+            }
+        }
+            return;
+    
 
 
         /*
@@ -122,7 +146,6 @@ public class HW1 {
         }
 
     } // End class LinkedList
-
 
 
 
@@ -160,8 +183,18 @@ public class HW1 {
             Stack<Character> stack = new Stack<>();
             input = input.toLowerCase().replaceAll("\\s+", "");
 
-            // Your CODE GOES HERE
-            return false;
+            for(char c : input.toCharArray()){
+                stack.push(c);
+            }
+
+            for (char c : input.toCharArray()){
+                if(c !=stack.pop()){
+                    return false;
+                }
+
+            }
+            return true;
+        
         }
 
 
