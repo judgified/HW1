@@ -212,7 +212,7 @@ public class HW1 {
         public static int findLargestK(Stack<Integer> stack, int k) {
         Stack<Integer> temp = new Stack<>();
             int index = -1;
-            int pos = stack.size() - 1; //top has highest index 
+            int pos = stack.size() - 1; 
 
             while (!stack.isEmpty()){
                 int val = stack.pop();
@@ -223,7 +223,7 @@ public class HW1 {
                 pos--;
             }
 
-            //restores orginal stack
+            //restore
             while (!temp.isEmpty()) {
                 stack.push(temp.pop());
         }
@@ -284,7 +284,7 @@ public class HW1 {
          */
 
         // RETURN THE CORRECT OPTION LISTED ABOVE
-        return 2;
+        return 2; //linear loop + ln inner loop
     }
 
 }
