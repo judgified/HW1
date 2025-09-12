@@ -217,23 +217,21 @@ public class HW1 {
             while (!stack.isEmpty()){
                 int val = stack.pop();
                 if(val == k){
-                    index = pos;
-                    
-            }
+                    index = pos;     
+                }
                 temp.push(val);
                 pos--;
-                
+            }
 
             //restores orginal stack
             while (!temp.isEmpty()) {
                 stack.push(temp.pop());
-            }
+        }
 
         return index;
-            }
+     }
     
          // End class Stacks
-
 
 
     /*******************************
