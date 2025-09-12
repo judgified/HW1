@@ -225,11 +225,13 @@ public class HW1 {
                 
 
             //restores orginal stack
-            while(!temp.isEmpty()){
+            while (!temp.isEmpty()) {
                 stack.push(temp.pop());
             }
 
         return index;
+            }
+    
          // End class Stacks
 
 
