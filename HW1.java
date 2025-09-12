@@ -220,23 +220,17 @@ public class HW1 {
                     index = pos;
                     
             }
+                temp.push(val);
+                pos--;
+                
 
             //restores orginal stack
             while(!tempisEmpty()){
                 stack.push(temp.pop());
             }
 
-        }
-    
-    
-    }
-
-    
-            
-            return -1;
-        }
-
-    }  // End class Stacks
+        return index;
+         // End class Stacks
 
 
 
