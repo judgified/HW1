@@ -109,7 +109,7 @@ public class HW1 {
          * value equal to the value the provided parameter 'value'.
          */
 
-        public void removeElement ( int value ) {
+        public void removeElements ( int value ) {
         // Remove nodes from the head WHILE head matches
         while(head != null && head.data == value){
             head = head.next;
