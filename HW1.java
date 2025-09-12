@@ -129,7 +129,6 @@ public class HW1 {
             return;
     
 
-
         /*
          * Method toString() - this is a helper method for printing / constructing
          * a string object from the linked-list.
@@ -146,7 +145,6 @@ public class HW1 {
         }
 
     } // End class LinkedList
-
 
 
     /*
@@ -214,8 +212,28 @@ public class HW1 {
          * completed, place them all back in teh original stack.
          */
         public static int findLargestK(Stack<Integer> stack, int k) {
+        Stack<Integer> temp = new Stack<>();
+            int index = -1;
+            int pos = stack.size() - 1; //top has highest index 
 
-            // YOUR CODE GOES HERE
+            while (!stack.isEmpty()){
+                int val = stacl.pop();
+                if(val =pos;
+            }
+
+            //restores orginal stack
+            while(!tempisEpty()){
+                stack.push(temp.pop());
+            }
+
+            return index;
+        }
+    
+    
+    }
+
+    
+            
             return -1;
         }
 
@@ -252,7 +270,7 @@ public class HW1 {
         */
 
         // RETURN THE CORRECT OPTION NUMBER LISTED ABOVE
-        return -1;
+        return 3;
     }
 
 
@@ -273,7 +291,7 @@ public class HW1 {
          */
 
         // RETURN THE CORRECT OPTION LISTED ABOVE
-        return -1;
+        return 2;
     }
 
 }
