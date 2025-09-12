@@ -225,7 +225,7 @@ public class HW1 {
                 
 
             //restores orginal stack
-            while(!tempisEmpty()){
+            while(!temp.isEmpty()){
                 stack.push(temp.pop());
             }
 
