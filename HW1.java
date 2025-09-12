@@ -88,13 +88,13 @@ public class HW1 {
         public void removeElementsLT ( int ltValue ) {
 
             // This method removes nodes from the head while the head is less than ItValue
-            while(head != null && head.data <ItValue) {
+            while(head != null && head.data <ltValue) {
                 head = head.next;
             }
 
             Node current = head;
             while (current != null && current.next != null){
-                if (current.next.data < ItValue) {
+                if (current.next.data < ltValue) {
                     current.next = current.next.next;
                 } else {
                     current = current.next;
@@ -102,7 +102,6 @@ public class HW1 {
             }
         }
 
-            return;
 
 
         /*
@@ -112,7 +111,7 @@ public class HW1 {
 
         public void removeElement ( int value ) {
         // Remove nodes from the head WHILE head matches
-        while(head != null && head.daa == value){
+        while(head != null && head.data == value){
             head = head.next;
         }
 
@@ -126,7 +125,6 @@ public class HW1 {
 
             }
         }
-            return;
     
 
         /*
@@ -217,16 +215,17 @@ public class HW1 {
             int pos = stack.size() - 1; //top has highest index 
 
             while (!stack.isEmpty()){
-                int val = stacl.pop();
-                if(val =pos;
+                int val = stack.pop();
+                if(val == k){
+                    index = pos;
+                    
             }
 
             //restores orginal stack
-            while(!tempisEpty()){
+            while(!tempisEmpty()){
                 stack.push(temp.pop());
             }
 
-            return index;
         }
     
     
