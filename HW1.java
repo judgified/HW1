@@ -11,6 +11,7 @@
  * specific number returned.
  */
 
+
 import java.util.Stack;
 
 public class HW1 {
@@ -88,7 +89,7 @@ public class HW1 {
         public void removeElementsLT ( int ltValue ) {
 
             // This method removes nodes from the head while the head is less than ItValue
-            while(head != null && head.data <ltValue) {
+            while(head != null && head.data < ltValue) {
                 head = head.next;
             }
 
@@ -109,10 +110,14 @@ public class HW1 {
          * value equal to the value the provided parameter 'value'.
          */
 
-        public void removeElements ( int value ) {
+        public void removeElement (int value) {
         // Remove nodes from the head WHILE head matches
         while(head != null && head.data == value){
             head = head.next;
+        }
+
+        if (head == null) {
+        return;
         }
 
             Node current = head;
@@ -210,13 +215,13 @@ public class HW1 {
          * completed, place them all back in teh original stack.
          */
         public static int findLargestK(Stack<Integer> stack, int k) {
-        Stack<Integer> temp = new Stack<>();
+            Stack<Integer> temp = new Stack<>();
             int index = -1;
             int pos = stack.size() - 1; 
 
             while (!stack.isEmpty()){
                 int val = stack.pop();
-                if(val == k){
+                if(val == k && index == -1){
                     index = pos;     
                 }
                 temp.push(val);
@@ -226,12 +231,12 @@ public class HW1 {
             //restore
             while (!temp.isEmpty()) {
                 stack.push(temp.pop());
-        }
+            }
 
-        return index;
-     }
+            return index;
+        }
     
-         // End class Stacks
+    } // End class Stacks
 
 
     /*******************************
@@ -288,4 +293,3 @@ public class HW1 {
     }
 
 }
-
