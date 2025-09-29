@@ -88,7 +88,7 @@ public class HW1 {
         public void removeElementsLT ( int ltValue ) {
 
             // This method removes nodes from the head while the head is less than ItValue
-            while(head != null && head.data <ltValue) {
+            while(head != null && head.data < ltValue) {
                 head = head.next;
             }
 
@@ -109,24 +109,26 @@ public class HW1 {
          * value equal to the value the provided parameter 'value'.
          */
 
-        public void removeElements ( int value ) {
+       public void removeElement (int value) {
         // Remove nodes from the head WHILE head matches
         while(head != null && head.data == value){
             head = head.next;
-        }
+         }
 
-            Node current = head;
-            while(current != null && current.next != null){
-                if (current.next.data == value){
-                    current.next = current.next.next;
-                } else {
-                    current = current.next;
-                }
+                 if (head == null) {
+                return;
+             }
 
-            }
-        }
-    
-
+                  Node current = head;
+                  while(current != null && current.next != null){
+                    if (current.next.data == value){
+                 current.next = current.next.next;
+                 // Don't advance current - check the new next node
+             } else {
+            current = current.next;
+             }
+    }
+}
         /*
          * Method toString() - this is a helper method for printing / constructing
          * a string object from the linked-list.
@@ -209,29 +211,28 @@ public class HW1 {
          * pop elements off the passed in stack, place them in a temp stack. Then when
          * completed, place them all back in teh original stack.
          */
-        public static int findLargestK(Stack<Integer> stack, int k) {
+      public static int findLargestK(Stack<Integer> stack, int k) {
         Stack<Integer> temp = new Stack<>();
-            int index = -1;
-            int pos = stack.size() - 1; 
+        int index = -1;
+        int pos = stack.size() - 1; 
 
             while (!stack.isEmpty()){
-                int val = stack.pop();
-                if(val == k){
-                    index = pos;     
-                }
-                temp.push(val);
-                pos--;
-            }
+             int val = stack.pop();
+                if(val == k && index == -1){
+                  index = pos;     
+                         }
+             temp.push(val);
+             pos--;
+                 }
 
             //restore
-            while (!temp.isEmpty()) {
-                stack.push(temp.pop());
-        }
+         while (!temp.isEmpty()) {
+             stack.push(temp.pop());
+            }
 
-        return index;
-     }
-    
-         // End class Stacks
+         return index;
+        }
+    }// End class Stacks
 
 
     /*******************************
@@ -288,4 +289,5 @@ public class HW1 {
     }
 
 }
+
 
